@@ -12,6 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         // Schema::rename('profiles','new_profiles');
+        Schema::rename('new_profiles','profiles');
         
     }
 

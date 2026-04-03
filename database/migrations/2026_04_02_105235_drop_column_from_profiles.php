@@ -26,3 +26,4 @@ return new class extends Migration
         });
     }
 };
+// 56 [Migration] Understanding Relationship Constraint

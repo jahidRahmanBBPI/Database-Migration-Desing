@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('product_sliders', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->string('description');      
+            $table->string('image');
+            $table->unsignedBigInteger('product_id')->unique();
             $table->timestamps();
         });
     }

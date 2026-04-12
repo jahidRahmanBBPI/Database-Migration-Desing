@@ -25,7 +25,7 @@ return new class extends Migration
             $table->foreign('profile_email')->references('email')->on('users')->restrictOnDelete()->cascadeOnUpdate();
 
             $table->timestamp('created_at')->useCurrent();
-            $table->timestamps('updated_at')->useCurrent()->useCurrentOnUpdate();
+            // $table->timestamps('updated_at')->useCurrent()->useCurrentOnUpdate();
         });
     }
 
@@ -34,6 +34,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('profiles');
+        // Schema::dropIfExists('profiles');
     }
 };

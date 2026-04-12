@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('profiles', function (Blueprint $table) {
-            $table->dropColumn('city', 'gender');
+            // $table->dropColumn('city', 'gender');
         });
     }
 
@@ -21,9 +21,9 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('profiles', function (Blueprint $table) {
-            //
-        });
+        // Schema::table('profiles', function (Blueprint $table) {
+        //     //
+        // });
     }
 };
 // 56 [Migration] Understanding Relationship Constraint

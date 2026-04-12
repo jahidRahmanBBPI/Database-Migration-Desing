@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('product_wishes', function (Blueprint $table) {
             $table->id();
+            $table->string('email', 50);
+            $table->unsignedBigInteger('product_id');
+
+            $table->foreign('email')->references('email')->on('users')->restrictOnDelete()->restrictOnUpdate();
+            $table->foreign('product_id')->references('id')->on('products')->restrictOnDelete()->restrictOnUpdate();
             $table->timestamps();
         });
     }

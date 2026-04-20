@@ -17,6 +17,8 @@ return new class extends Migration
             $table->string('lastName', 50);
             $table->string('phone', 20);
             $table->string('address', 255);
+            // $table->integer('phone_number');
+            // $table->date('date_of_birth');
             $table->string('shippingAddress', 255);
             $table->string('profile_email', 50)->unique();
             // $table->timestamps();
@@ -34,6 +36,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        // Schema::dropIfExists('profiles');
+        Schema::dropIfExists('profiles');
     }
 };

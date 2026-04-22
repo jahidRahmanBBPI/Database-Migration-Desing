@@ -34,7 +34,9 @@ return new class extends Migration
 
             // Brand Relationship
             $table->foreign('brand_id')->references('id')->on('brands')->restrictOnDelete()->cascadeOnUpdate();
-        });
+            // Alternative way to define foreign key.
+            // $table->foreignId('brand_id')->constrained()->onDelete('restrict')->onUpdate('cascade');
+            });
     }
 
     /**
